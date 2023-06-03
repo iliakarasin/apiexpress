@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "f83c4e31-d14e-4605-82a6-56ced8e709a4",
+		"name": "Mocks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19491162",
+		"_collection_link": "https://yml-api-dev.postman.co/workspace/API-Mocking-(Hackathon-2023)~ff677518-6679-4c6f-96e3-00d9fe712e9a/collection/27775426-f83c4e31-d14e-4605-82a6-56ced8e709a4?action=share&creator=19491162&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "persistence",
+						"value": "1b0c8e81-4c19-4f91-b779-c6b83ce487a7",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/persons?schema={\"personId\": \"guid\" ,\"birthday\": \"date in iso format\", \"email\": \"email\", \"firstName\": \"string\", \"lastName\":\"string\"}&prompt=List of 5 people, with a parent users object&count=10&skipcache=yes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"persons"
+					],
+					"query": [
+						{
+							"key": "schema",
+							"value": "{\"personId\": \"guid\" ,\"birthday\": \"date in iso format\", \"email\": \"email\", \"firstName\": \"string\", \"lastName\":\"string\"}"
+						},
+						{
+							"key": "prompt",
+							"value": "List of 5 people, with a parent users object"
+						},
+						{
+							"key": "count",
+							"value": "10"
+						},
+						{
+							"key": "skipcache",
+							"value": "yes"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transactions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "persistence",
+						"value": "1b0c8e81-4c19-4f91-b779-c6b83ce487a7",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/persons?schema={\"transId\": \"guid\" ,\"transTitle\": \"title\", \"transAmt\": \"plus or minus in usd\", \"transTime\": \"date time\", \"transAcct\":\"checking or savings or retirement\"}&prompt=A list of transactions&count=5&skipcache=yes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"persons"
+					],
+					"query": [
+						{
+							"key": "schema",
+							"value": "{\"transId\": \"guid\" ,\"transTitle\": \"title\", \"transAmt\": \"plus or minus in usd\", \"transTime\": \"date time\", \"transAcct\":\"checking or savings or retirement\"}"
+						},
+						{
+							"key": "prompt",
+							"value": "A list of transactions"
+						},
+						{
+							"key": "count",
+							"value": "5"
+						},
+						{
+							"key": "skipcache",
+							"value": "yes"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prescriptions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "persistence",
+						"value": "1b0c8e81-4c19-4f91-b779-c6b83ce487a7",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/persons?schema={\"drugId\": \"int\" ,\"drugName\": \"drug name\", \"drugDose\": \"drug doseage\", \"drugQty\": \"amount\", \"drugNotes\":\"doctor notes\"}&prompt=A list of prescription drugs&count=5&skipcache=yes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"persons"
+					],
+					"query": [
+						{
+							"key": "schema",
+							"value": "{\"drugId\": \"int\" ,\"drugName\": \"drug name\", \"drugDose\": \"drug doseage\", \"drugQty\": \"amount\", \"drugNotes\":\"doctor notes\"}"
+						},
+						{
+							"key": "prompt",
+							"value": "A list of prescription drugs"
+						},
+						{
+							"key": "count",
+							"value": "5"
+						},
+						{
+							"key": "skipcache",
+							"value": "yes"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accounts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "persistence",
+						"value": "1b0c8e81-4c19-4f91-b779-c6b83ce487a7",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/persons?schema={\"acctName\": \"title\" ,\"acctType\": \"financial account\", \"acctId\": \"guid\", \"actBalance\": \"usd\", \"acctSrc\":\"bank name\"}&prompt=A list of bank accounts with a parent user object&count=5&skipcache=yes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"persons"
+					],
+					"query": [
+						{
+							"key": "schema",
+							"value": "{\"acctName\": \"title\" ,\"acctType\": \"financial account\", \"acctId\": \"guid\", \"actBalance\": \"usd\", \"acctSrc\":\"bank name\"}"
+						},
+						{
+							"key": "prompt",
+							"value": "A list of bank accounts with a parent user object"
+						},
+						{
+							"key": "count",
+							"value": "5"
+						},
+						{
+							"key": "skipcache",
+							"value": "yes"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
