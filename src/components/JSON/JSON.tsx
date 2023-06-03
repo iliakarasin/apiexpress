@@ -10,7 +10,6 @@ export const JSON = ({ code }: JSONProps) => {
 
     const parsed = window.JSON.parse(code);
     const colorizedCode = prettyPrintJson.toHtml(parsed);
-    console.log(colorizedCode);
 
     return (
         <div className={styles.json}>
