@@ -28,10 +28,11 @@ Using Mock data in native applications and acquiring test data is not always as 
 ### Local installation
 1. Clone repository & `cd` into the `ultimock` directory
 2. `yarn` to install package dependencies
-3. `yarn docker:build` to build your docker image
-4. `yarn docker:run` to bind your docker image to `https://localhost:8080` and serve
-5. Using the web interface concatenate your query
-6. Logs and caches are archived to your filesystem under `app/storage/logs` and `app/storage/cache` respectively
+3. `yarn build` to build the app
+4. `yarn docker:build` to build your docker image
+5. `yarn docker:run` to bind your docker image to `https://localhost:8080` and serve
+6. Using the web interface concatenate your query
+7. Logs and caches are archived to your filesystem under `app/storage/logs` and `app/storage/cache` respectively
 
 ### Postman collection
 A [Postman](https://www.postman.com/) collection of test queries can be found in the repository as well titled `postman_collection.json`
