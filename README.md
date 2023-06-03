@@ -19,8 +19,8 @@ Using Mock data in native applications and acquiring test data is not always as 
 
 ## Dev setup
 ### Dependencies
-- [yarn] (https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable)
-- [docker] (https://docs.docker.com/engine/install/)
+- [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable)
+- [docker](https://docs.docker.com/engine/install/)
 
 ### Branching
 - branch `main` contains working build
