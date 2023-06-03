@@ -40,10 +40,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>APIExpress</title>
+        <title>api[express]</title>
         <meta name="description" content="Generate APIs with content generation AI" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <Hero heading="APIExpress" subheading="The AI powered API generator" />
       <main>

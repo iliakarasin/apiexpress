@@ -8,7 +8,7 @@ type HeroProps = {
 export const Hero = ({ heading, subheading }: HeroProps) => {
     return (
         <div className={styles.hero}>
-            <h1>{heading}</h1>
+            <img src="/assets/logo.png" alt="APIExpress" />
             <p>{subheading}</p>
         </div>
     );
