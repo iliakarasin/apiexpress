@@ -24,5 +24,8 @@
     "react-dom": "18.2.0",
     "sass": "^1.62.1",
     "typescript": "5.1.3"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.1.1"
   }
 }
