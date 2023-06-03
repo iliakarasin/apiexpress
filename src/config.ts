@@ -1,4 +1,10 @@
+let logType = 'file';
+
 export const config = {
+    logType: {
+        getLogType: () => logType,
+        setLogType: (type: string) => logType = type,
+    },
     paths: {
         storage: './storage',
         cache: './storage/cache',

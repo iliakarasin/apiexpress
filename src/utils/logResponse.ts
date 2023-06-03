@@ -18,11 +18,12 @@ type LogResponseData = {
 };
 
 export const logResponse = (data: LogResponseData) => {
-    const date = Date.now();
+    const date = (new Date()).toISOString();
     const hashedPrompt = hash(data.prompt);
     const logFilePath = `${config.paths.requests}/${hashedPrompt}`;
+    const logType = config.logType.getLogType();
 
-    if ( ! fs.existsSync(logFilePath) ) fs.writeFileSync(logFilePath, '');
+    if ( logType === 'file' && ! fs.existsSync(logFilePath) ) fs.writeFileSync(logFilePath, '');
 
     let stringifiedCode = data.code;
     try {
@@ -55,5 +56,9 @@ export const logResponse = (data: LogResponseData) => {
     // Code Generated
     log += `Code:\n${smallSeperator}\n${stringifiedCode}`;
 
-    fs.appendFileSync(logFilePath, `${log}\n`, 'utf8');
+    if ( logType === 'file' ) {
+        fs.appendFileSync(logFilePath, `${log}\n`, 'utf8');
+    } else {
+        console.log(log);
+    }
 };

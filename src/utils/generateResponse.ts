@@ -1,6 +1,7 @@
 import { initializeDirectories } from '@/initDirectories';
 import { generateLLMPrompt } from './generateLLMPrompt';
 import { OpenAPI } from './openAPI';
+import { config } from '@/config';
 
 type ResponseInput = {
     path: string;
