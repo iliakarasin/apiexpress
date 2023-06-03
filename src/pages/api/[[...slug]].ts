@@ -24,5 +24,13 @@ export default async function handler(
     count,
   });
 
-  res.status(200).json(response)
+  res
+    .status(200)
+    .setHeader('x-apie-cache', response.cache ? 'true' : 'false')
+    .setHeader('x-apie-model', response.model ? response.model : '')
+    .setHeader('x-apie-timing', response.requestTime ? response.requestTime.toString() : '')
+    .setHeader('x-apie-token-prompt', response.tokens ? response.tokens.prompt : '')
+    .setHeader('x-apie-token-response', response.tokens ? response.tokens.response : '')
+    .setHeader('x-apie-token-total', response.tokens ? response.tokens.total : '')
+    .json(response.code);
 }

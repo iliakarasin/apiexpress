@@ -20,7 +20,7 @@ export const generateResponse = async (input: ResponseInput) => {
         count: input.count,
     });
 
-    const llmResponse = await OpenAPI.getResponse(prompt);
+    const response = await OpenAPI.getResponse(prompt);
 
-    return llmResponse;
+    return response;
 };

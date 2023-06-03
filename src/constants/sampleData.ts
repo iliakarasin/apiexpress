@@ -1,7 +1,7 @@
 const sampleSchema = `{
-    "Person": "String",
-    "BirthDate": "Date",
-    "id": "GUID"
+    "id": "UUID",
+    "name": "full name, including middle initial",
+    "birthDate": "YYYY-MM-DD",
 }`;
 
 export const sampleData = {

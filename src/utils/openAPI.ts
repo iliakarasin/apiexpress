@@ -3,10 +3,26 @@ import { Cache } from './cache';
 import { getCodeFromText } from './getCodeFromResponse';
 import { logResponse } from './logResponse';
 
-const getResponse = async (prompt: string) => {
+type LLMResponse = {
+    code: string;
+    cache: boolean;
+    model?: string;
+    requestTime?: number;
+    tokens?: {
+        prompt: string;
+        response: string;
+        total: string;
+    };
+};
+
+const getResponse = async (prompt: string): Promise<LLMResponse> => {
     const cacheExists = Cache.itemExistsInCache(prompt);
     if ( cacheExists ) {
-        return getCodeFromText(Cache.getItemFromCache(prompt));
+        const code = getCodeFromText(Cache.getItemFromCache(prompt));
+        return {
+            code,
+            cache: true,
+        };
     }
 
     const body = JSON.stringify({
@@ -43,7 +59,11 @@ const getResponse = async (prompt: string) => {
                 },
             },
         });
-        return json;
+
+        return {
+            code: json,
+            cache: false,
+        };
     }
 
     const text = json.choices[0].text;
@@ -65,7 +85,17 @@ const getResponse = async (prompt: string) => {
 
     Cache.saveItemToCache(prompt, JSON.stringify(code));
 
-    return code;
+    return {
+        code,
+        model,
+        requestTime: endTime - startTime,
+        tokens: {
+            prompt: json.usage.prompt_tokens || null,
+            response: json.usage.completion_tokens || null,
+            total: json.usage.total_tokens || null,
+        },
+        cache: false,
+    };
 };
 
 export const OpenAPI = {

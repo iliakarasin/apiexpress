@@ -22,6 +22,7 @@ const generateAPIUrl = (values: PromptValues): string => {
 export default function Home() {
   const [loading, setLoading] = useState(false);
   const [code, setCode] = useState<string>('');
+  const [metadata, setMetadata] = useState<Headers>();
 
   const handlePromptChange = (values: PromptValues) => {
     generateJSON(values);
@@ -34,6 +35,7 @@ export default function Home() {
     const response = await fetch(url);
     const data = await response.json();
     setCode(JSON.stringify(data, null, 2));
+    setMetadata(response.headers);
     setLoading(false);
   };
 
@@ -50,7 +52,7 @@ export default function Home() {
         <Prompt onPromptSubmission={handlePromptChange} userCanGenerate={!loading} />
 
         {loading && <Loader />}
-        {!loading && <JSONComponent code={code} />}
+        {!loading && <JSONComponent code={code} headers={metadata} />}
       </main>
     </>
   );
