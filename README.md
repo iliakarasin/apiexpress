@@ -32,3 +32,6 @@ Using Mock data in native applications and acquiring test data is not always as 
 4. `yarn docker:run` to bind your docker image to `https://localhost:8080` and serve
 5. Using the web interface concatenate your query
 6. Logs and caches are archived to your filesystem under `app/storage/logs` and `app/storage/cache` respectively
+
+### Postman collection
+A [Postman](https://www.postman.com/) collection of test queries can be found in the repository as well titled `postman_collection.json`
