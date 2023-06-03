@@ -1,0 +1,41 @@
+.json {
+    display: block;
+    padding: 20px 80px;
+
+    p {
+        margin-bottom: 32px;
+        margin-left: 8px;
+    }
+
+    code {
+        position: relative;
+        width: 100%;
+        min-height: 40px;
+        display: block;
+        white-space: pre-wrap;
+        padding: 20px;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            border: 2px solid #000;
+            width: 20px;
+            height: 20px;
+        }
+
+        &::before {
+            top: -2px;
+            left: -2px;
+            border-right: 0;
+            border-bottom: 0;
+        }
+
+        &::after {
+            bottom: -2px;
+            right: -2px;
+            border-top: 0;
+            border-left: 0;
+        }
+    }
+}
