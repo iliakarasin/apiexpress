@@ -34,9 +34,9 @@ Using Mock data in native applications and acquiring test data is not always as 
 
 ## Dev setup
 ### Dependencies
-- [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable)
-- [docker](https://docs.docker.com/engine/install/)
-- [OpenAI ChatGPT3 API key](https://platform.openai.com/account/api-keys)
+- [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable)
+- [Docker](https://docs.docker.com/engine/install/)
+- [OpenAI API key](https://platform.openai.com/account/api-keys)
 
 ### Branching
 - branch `main` contains working build
