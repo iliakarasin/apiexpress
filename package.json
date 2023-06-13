@@ -1,5 +1,5 @@
 {
-  "name": "ultimock",
+  "name": "apiexpress",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "docker": "npm run docker:build && npm run docker:run",
-    "docker:build": "docker build -t ultimock .",
-    "docker:run": "docker run -p 8080:8080 ultimock"
+    "docker:build": "docker build -t apiexpress .",
+    "docker:run": "docker run -p 8080:8080 apiexpress"
   },
   "dependencies": {
     "@types/node": "20.2.5",
